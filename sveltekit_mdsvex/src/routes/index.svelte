@@ -1,5 +1,5 @@
 <script context="module">
-	const posts = import.meta.glob('./blog/*.svx');
+	const posts = import.meta.glob('./posts/*.svx');
 
 	let body = [];
 
@@ -33,7 +33,7 @@
 	<h1 class="text-center text-xl font-bold">Blog</h1>
 	{#each posts as { title, description, slug }}
 		<li class="m-4">
-			<a rel="prefetch" href="blog/{slug}">
+			<a rel="prefetch" href="posts/{slug}">
 				<h2 class="text-lg font-semibold">
 					{title}
 				</h2>
