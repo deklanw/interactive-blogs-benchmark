@@ -1,0 +1,22 @@
+---
+export interface Props {
+	post: any;
+}
+
+const { post } = Astro.props;
+---
+
+<article>
+		<li class="m-4 list-none">
+			<a rel="prefetch" href={post.url}>
+				<h2 class="text-lg font-semibold">
+					{post.title}
+				</h2>
+
+				<p>
+					{post.description}
+				</p>
+			</a>
+		</li>
+</article>
+

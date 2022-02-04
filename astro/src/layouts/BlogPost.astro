@@ -1,0 +1,19 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Container from '../components/Container.astro';
+
+
+const { content } = Astro.props;
+const { title, description, publishDate, author, heroImage, permalink, alt } = content;
+---
+
+<html lang='en'>
+	<head>
+		<BaseHead {title} {description} {permalink} />
+	</head>
+
+
+	<Container>
+		<article class="blogpost"><slot /></article>
+	</Container>
+</html>

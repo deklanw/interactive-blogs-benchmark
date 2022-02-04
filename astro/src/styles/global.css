@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.blogpost h1 {
+    @apply font-bold;
+    @apply text-lg;
+    @apply my-4;
+}
+
+.blogpost h2 {
+    @apply font-semibold;
+    @apply text-lg;
+    @apply my-2;
+}
+
+.blogpost ul {
+    @apply list-disc;
+    @apply mx-10;
+    @apply my-2;
+}
+
+.blogpost ol {
+    @apply list-decimal;
+    @apply mx-10;
+    @apply my-2;
+}
+
+.blogpost blockquote {
+    @apply p-4;
+    @apply italic;
+    @apply border-l-4;
+}
+
+.blogpost a {
+    @apply text-blue-800;
+}
+
+.blogpost p {
+    @apply my-2;
+}

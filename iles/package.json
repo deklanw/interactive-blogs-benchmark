@@ -1,0 +1,21 @@
+{
+  "name": "iles-app",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "iles dev --open",
+    "build": "iles build",
+    "preview": "iles preview --open --port 5050",
+    "typecheck": "vue-tsc --noEmit"
+  },
+  "engines": {
+    "node": "^14.18 || >= 16.0.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.2",
+    "iles": "^0.7.19",
+    "postcss": "^8.4.5",
+    "tailwindcss": "^3.0.17",
+    "typescript": "^4.5",
+    "vue-tsc": "^0.29"
+  }
+}
