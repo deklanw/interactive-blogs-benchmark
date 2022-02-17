@@ -7,7 +7,7 @@ title: My Site
 </script>
 
 <template layout="nonpost">
-  <h1>Posts</h1>
+  <h1 class="text-xl font-bold">Posts</h1>
   <ul v-for="post of posts" v-bind:key="post.title">
     <!-- <component :is="post" excerpt/> -->
 		<li class="m-4 list-none">
