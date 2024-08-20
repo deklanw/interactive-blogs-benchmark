@@ -1,37 +1,10 @@
-<script context="module">
-	/**
-	 * @type {import('@sveltejs/kit').Load}
-	 */
-	export async function load({ url, fetch }) {
-		// handle trailing slashes, if applicable: e.g., Netlify
-		const l = url.pathname.length;
-
-		const stripped = url.pathname[l - 1] == '/' ? url.pathname.slice(0, l - 1) : url.pathname;
-
-		const post = await fetch(`${stripped}.json`).then((res) => res.json());
-
-		if (!post) {
-			return {
-				status: 404,
-				error: new Error('Post could not be found')
-			};
-		}
-
-		return {
-			props: {
-				post
-			}
-		};
-	}
-</script>
-
 <script>
 	import SEO from '$lib/components/seo.svelte';
 
-	export let post;
+	export let data;
 </script>
 
-<SEO title={post.title} description={post.description} />
+<SEO title={data.post.title} description={data.post.description} />
 
 <article class="blogpost">
 	<slot />
